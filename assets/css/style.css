@@ -1,0 +1,587 @@
+/* ********************************* RESET ********************************* */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/******************************** GENERAL ************************************/
+:root {
+  --background-color: #EEDFC9;
+  --primary-color: #213E40;
+  --secondary-color: #FFD346;
+  --alt-color: #346550;
+  --hover-color: #F29933;
+
+  --gap: 0.5vw;
+}
+
+/* CHANGE FONT HERE */
+html,
+body {
+  font-family: Rockwell, "Courier New", Courier, Georgia,
+                 Times, "Times New Roman", serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: var(--background-color);
+  overflow: hidden;
+}
+
+section {
+  min-height: 100vh;
+  padding: var(--gap);
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.flex-row-even {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-col-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.v-align {
+  align-items: center;
+}
+
+/********************************* GRIDS ************************************/
+
+.flex-div {
+  display: flex;
+}
+
+.flex-right-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 10vw;
+  margin-top: -12vh !important;
+}
+
+.col-6,
+.col-3,
+.col-2,
+.col-8,
+.col-4 {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+.col-6 > div,
+.col-2 > div,
+.col-8 > div {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.col-12 {
+  margin-top: 32px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.row {
+  margin: 0;
+  padding: 16px 8px;
+}
+
+.row.base {
+  padding: 6.0vh 3.0vw 0vh 3.0vw;
+}
+
+
+/********************************* OVERLAY ************************************/
+
+.paper-overlay{
+  position:absolute;
+  /* CHANGE URL FOR OVERLAY */
+  background: url("../images/spring/paper-texture.png") 0 0 no-repeat fixed;
+  background-size:cover;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  mix-blend-mode: multiply;
+  opacity:0.25;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  z-index:1;
+  pointer-events: none;
+}
+
+
+/******************************* BACKGROUND **********************************/
+
+
+
+.desktop-display {
+  /* CHANGE URL FOR BACKGROUND IMAGE (MAKE SURE TO CHANGE MOBILE AS WELL) */
+  background-image:url("../images/TRITON-FEST-FA22-DESKTOP.svg");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position:center;
+  height: 100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+
+/********************************* IMAGES ************************************/
+
+.tf-header {
+  padding: 2.5vw 2vw;
+  background-color: var(--black);
+  font-size: 3vw;
+  color: var(--background-color);
+  width: 100%;
+}
+
+.header-image {
+  width: 100%;
+}
+
+.img-div {
+  width: 80%;
+  height: auto;
+}
+
+.header-img-div {
+  width: 80%;
+  height: auto;
+}
+
+.img-newsletter {
+  width: 100%;
+  height: auto;
+  right: 0px;
+}
+.img-newsletter:hover{
+  filter: contrast(110%);
+}
+
+.tf-monster-3 {
+  width: 80%;
+  height: auto;
+  margin-bottom: -25px;
+}
+
+.tf-logo {
+  fill: var(--primary-color);
+  position: absolute;
+  bottom: 32px;
+  left: 0px;
+  width: 10vw;
+  height: auto;
+}
+
+
+/********************************* INFO BOXES ***********************************/
+
+
+.tf-info {
+  padding: 2vh 1.8vw;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  justify-content: space-between;
+  border: 3px solid var(--secondary-color);
+  margin-top: 32px !important;
+}
+
+.info-alt{
+  background-color: var(--alt-color);
+}
+
+.tf-info p {
+  font-size: 1.3vw;
+  font-weight: 400;
+  text-align: left;
+  padding: .1vh 0;
+  color: var(--secondary-color);
+}
+
+.tf-info h1 {
+  font-weight: 700;
+  text-align: left;
+  font-size: 2.0vw;
+}
+
+.tf-info h2 {
+  text-align: left;
+  font-size: 2.0vw;
+  font-weight: normal;
+}
+
+.tf-info h3 {
+  text-align: left;
+  font-size: 1.0vw;
+}
+
+.tf-info h4 {
+  font-weight: 700;
+  text-align: left;
+  font-size: 1.4vw;
+  color: var(--secondary-color);
+}
+
+.tf-info.event-box {
+  margin-top: -3.0px !important;
+  margin-bottom: 0px !important;
+}
+
+.tf-info.event-box:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.tf-newsletter {
+  margin-bottom: 0px !important;
+}
+
+.tf-newsletter .row {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.tf-newsletter .row .col-4 {
+  padding-bottom: 0px !important;
+}
+
+.newsletter-signup {
+  background: var(--pink);
+  color: var(--black);
+  padding: 2.74vw 1vw;
+  border: 0.3vw solid var(--black);
+  display: flex;
+  justify-content: space-between;
+  font-size: 1vw;
+}
+
+.newsletter-signup:hover {
+  cursor: pointer;
+  background: var(--black);
+  color: var(--pink);
+}
+
+.newsletter-signup img {
+  width: 2vw;
+  color: var(--black);
+}
+
+/********************************* FOOTER ************************************/
+
+.footer {
+  background: var(--secondary-color);
+  border-top: 3px solid var(--primary-color);
+  margin-top: -3px;
+  width: 100%;
+  padding: 16vw 16vw 16vw 12vw;
+  font-size: 5.0vw;
+  display: flex;
+  justify-content: space-between;
+  color: var(--primary-color);
+}
+
+.footer h1 {
+  font-weight: 700;
+}
+
+.footer img {
+  width: 7vw;
+  height: auto;
+  margin: 0 1vw;
+}
+
+.social-logos svg {
+  fill: var(--secondary-color);
+  width: 2vw;
+  height: auto;
+  margin-right: 1vw;
+  text-align: left;
+}
+
+.social-logos svg:hover {
+  fill: var(--hover-color);
+}
+
+.row.socials {
+  padding-top: 8px !important;
+  padding-bottom: 4px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  text-align: left;
+}
+
+.row.socials img {
+  width: 2.4vw;
+}
+
+.row.socials .col-4{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+
+/****************************** RESPONSIVENESS *********************************/
+
+@media screen and (min-width: 769px) {
+  .mobile-display {
+    display: none;
+  }
+} 
+
+@media screen and (max-width: 768px) {
+  .mobile-display {
+    display: block;
+  }
+
+  .desktop-display {
+    display: none;
+  }
+
+  html,
+  body {
+    overflow: auto;
+    background-color: var(--background-color);
+  }
+
+  .paper-overlay {
+    background-size: 100% 100%;
+    position: fixed;
+    width: auto;
+    height: 105%;
+  }
+
+  .mobile-background-top {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+  }
+
+  .mobile-background{
+    background-image:url("../images/mobile-tf-bg.svg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    display:inline-block;
+    width: 100vw;
+  }
+
+  .header-img-div {
+    width: 100%;
+  }
+
+  .tf-logo {
+    position: absolute;
+    bottom: 2px;
+    left: 8px;
+  }
+
+  .tf-info {
+    margin: 16px 0px !important;
+    padding: 2vh 2vw;
+  }
+
+  .tf-info p {
+    font-size: 1.5em;
+    text-align: left;
+    padding: 2.0vh 3.0vw;
+  }
+  
+  .tf-info h1 {
+    text-align: left;
+    font-size: 1.8em;
+  }
+  
+  .tf-info h2 {
+    text-align: left;
+    font-size: 1.8em;
+    color: var(--secondary-color);
+  }
+  
+  .tf-info h3 {
+    text-align: left;
+    font-size: 1.4em;
+  }
+
+  .img-newsletter {
+    width: 100%;
+    position: absolute;
+    margin-top: 25px;
+    right: -5px;
+  }
+
+  .social-logos svg {
+    width: 6vw;
+    height: auto;
+    margin-right: 1vw;
+    text-align: left;
+  }
+}
