@@ -131,6 +131,9 @@ table {
 }
 
 /******************************** GENERAL ************************************/
+
+/* CHANGE THESE COLORS TO MATCH YOUR THEME WITH THE FIGMA FILE */
+
 :root {
   --background-color: #EEDFC9;
   --primary-color: #213E40;
@@ -140,6 +143,8 @@ table {
 
   --gap: 0.5vw;
 }
+
+/* CHANGE THESE COLORS TO MATCH YOUR THEME WITH THE FIGMA FILE */
 
 /* CHANGE FONT HERE */
 html,
